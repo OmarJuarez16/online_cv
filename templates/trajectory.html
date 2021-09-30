@@ -11,15 +11,13 @@
           {% if loop.index % 2 == 0 %}
             <div class="column is-6 is-offset-6">
           {% endif %}
-          <h1 class="title is-1">{{event}}</h1>
           {% if loop.index % 2 != 0 %}
-            <hr class="content-divider" style="background-color: black; margin-right: 500px;">
-            <h2 class="subtitle has-text-justified has-text-black" style="margin-right: 500px;">
+            <div class="column is-6 is-offset-0">
           {% endif %}
-          {% if loop.index % 2 == 0 %}
+          <h1 class="title is-1">{{event}}</h1>
+
             <hr class="content-divider" style="background-color: black;">
             <h2 class="subtitle has-text-justified has-text-black">
-          {% endif %}    
             <div>
               ({{experience[event]["Dates"][0]}} - {{experience[event]["Dates"][1]}}) 
             </div>
