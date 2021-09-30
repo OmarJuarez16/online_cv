@@ -1,2 +1,1 @@
-# online_cv
-Web page with my CV
+# Omar Juarez CV
