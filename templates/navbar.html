@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CV - Omar Juarez</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+	
+	<!-- Contact Icons -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/personal.css') }}">
+	<script async type="text/javascript" src="{{ url_for('static', filename='javascript/bulma.css') }}"></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation bar -->
+	<nav class="navbar is-dark is-fixed-top">
+		<div class="navbar-brand">
+			<div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+
+		<div id="navbarExampleTransparentExample" class="navbar-menu">
+			<div class="navbar-end">
+				<a class="navbar-item" href="{{ url_for('index') }}">
+					<span class="icon">
+						<i class="fas fa-home"></i>
+					</span>
+					<span>Home</span>
+				</a>
+				<a class="navbar-item" href="{{ url_for('about') }}">
+					<span class="icon">
+						<i class="fas fa-info"></i>
+					</span>
+					<span>About</span>
+				</a>
+				<a class="navbar-item" href="{{ url_for('trajectory') }}">
+					<span class="icon">
+						<i class="fas fa-th-list"></i>
+					</span>
+					<span>Trajectory</span>
+				</a>
+				<a class="navbar-item" href="{{ url_for('certificate') }}">
+					<span class="icon">
+						<i class="fas fa-file-alt"></i>
+					</span>
+					<span>Certificates</span>
+				</a>
+				<a class="navbar-item" href="{{ url_for('contact') }}">
+					<span class="icon">
+						<i class="fas fa-envelope"></i>
+					</span>
+					<span>Contact</span>
+				</a>
+			</div>
+		</div>
+	</nav>
+
+	{% block body %}
+
+	{% endblock %}
+
+</body>
+
+</html>

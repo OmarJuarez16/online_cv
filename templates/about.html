@@ -1,0 +1,57 @@
+{% extends "navbar.html" %}
+
+{% block body %}
+
+<!-- About -->
+<section class="section" id="about">
+
+  <!-- Title -->
+  <div class="section-heading" style="padding-top:10px;">
+    <h3 class="title is-2 has-text-justified">About Me</h3>
+    <h4 class="subtitle is-5 has-text-justified">Always seeking to learn</h4>
+    <div class="container has-text-justified">
+      <p> Mechatronics engineer following a path of a data scientist. Experience working with AI, focused on computer vision; done research in adversarial training on deep learning models, developed an algorithm that obtains the phenotyping of grape clusters, and made research and development on the detection of solar panels and vehicles on satellite images.</p>
+    </div>
+  </div>
+  
+  <div  style="margin-bottom:-70px;">
+  </div>
+
+  <h3 class="title is-4 has-text-centered has-text-weight-bold">Skills</h3>
+
+
+
+  <div class="columns is-multiline has-same-height">
+
+
+    {% for topic in skills %}
+    <div class="column is-3">
+      <div class="card has-background-primary">
+        <div class="card-content skills-content card-color-primary">
+          <h3 class="title is-5 has-text-weight-bold">{{topic}}</h3>
+          <div class="content">
+
+            {% for skill in skills[topic] %}
+            <article class="media">
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>{{skill}}</strong>
+                    <br>
+                    <progress class="progress is-dark" value="{{skills[topic][skill]}}" max="100"></progress>
+                  </p>
+                </div>
+              </div>
+            </article>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+
+{% endblock %}
